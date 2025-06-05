@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand text-primary" routerLink="/">AI Trading Monitor</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link custom-hover d-none d-lg-block" routerLink="/financial-performance" routerLinkActive="active">Rendimiento Financiero</a>
+        </li>
+        <li class="nav-item px-2 text-muted d-none d-lg-block">|</li>
+        <li class="nav-item">
+          <a class="nav-link custom-hover" routerLink="/model-performance" routerLinkActive="active">Rendimiento del Modelo</a>
+        </li>
+        <li class="nav-item px-2 text-muted d-none d-lg-block">|</li>
+        <li class="nav-item">
+          <a class="nav-link custom-hover" routerLink="/operations" routerLinkActive="active">Operaciones</a>
+        </li>
+        <li class="nav-item px-2 text-muted d-none d-lg-block">|</li>
+        <li class="nav-item">
+          <a class="nav-link custom-hover" routerLink="/alerts" routerLinkActive="active">Alertas</a>
+        </li>
+        <li class="nav-item px-2 text-muted d-none d-lg-block">|</li>
+        <li class="nav-item">
+          <a class="nav-link custom-hover" routerLink="/resource-usage" routerLinkActive="active">Consumo de Recursos</a>
+        </li>
+        <li class="nav-item px-2 text-muted d-none d-lg-block">|</li>
+        <li class="nav-item">
+          <a class="nav-link custom-hover" routerLink="/settings" routerLinkActive="active">Configuración</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item px-2 text-muted d-none d-lg-block">|</li>
+        <li class="nav-item">
+          <a class="nav-link custom-hover text-primary" routerLink="/settings" routerLinkActive="active" style="cursor: pointer;">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

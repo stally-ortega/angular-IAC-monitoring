@@ -1,0 +1,12 @@
+<div class="card h-100" *ngIf="kpiData">
+  <div class="card-body text-center">
+    <h5 class="card-title text-muted">{{ kpiData.title }}</h5>
+    <h2 class="card-text display-6">
+      {{ kpiData.value }}
+      <span *ngIf="kpiData.unit">{{ kpiData.unit }}</span>
+    </h2>
+    <p class="card-text" *ngIf="kpiData.previousValue">
+      <small class="text-muted">Anterior: {{ kpiData.previousValue }}</small>
+    </p>
+    </div>
+</div>

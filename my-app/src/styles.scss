@@ -1,6 +1,6 @@
 @use "sass:map";
 
-$primary: #0d9488;
+$primary: #12bbad;
 $success: #16a34a;
 $danger: #dc2626;
 $warning: #f59e0b;
@@ -34,13 +34,13 @@ $dark-theme-colors: (
 
 // Sobre escribir las variables de Bootstrap para el modo oscuro
 .dark-mode {
-  --bs-body-bg: map.get($dark-theme-colors, "background");
-  --bs-body-color: map.get($dark-theme-colors, "text");
-  --bs-primary: map.get($dark-theme-colors, "primary");
-  --bs-success: map.get($dark-theme-colors, "success");
-  --bs-danger: map.get($dark-theme-colors, "danger");
-  --bs-warning: map.get($dark-theme-colors, "warning");
-  --bs-info: map.get($dark-theme-colors, "info");
-  --bs-dark: map.get($dark-theme-colors, "dark");
-  --bs-light: map.get($dark-theme-colors, "light");
+  --bs-body-bg: map.get($dark-theme-colors, "background") !important;
+  --bs-body-color: map.get($dark-theme-colors, "text") !important;
+  --bs-primary: map.get($dark-theme-colors, "primary") !important;
+  --bs-success: map.get($dark-theme-colors, "success") !important;
+  --bs-danger: map.get($dark-theme-colors, "danger") !important;
+  --bs-warning: map.get($dark-theme-colors, "warning") !important;
+  --bs-info: map.get($dark-theme-colors, "info") !important;
+  --bs-dark: map.get($dark-theme-colors, "dark") !important;
+  --bs-light: map.get($dark-theme-colors, "light") !important;
 }

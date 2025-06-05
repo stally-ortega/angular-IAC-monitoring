@@ -1,0 +1,127 @@
+/*------------------ TEXTO ------------------*/
+@keyframes whiteNeonPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #ffffffe5,
+      0 0 10px #ffffffd8,
+      0 0 20px #16ccbd,
+      0 0 30px #16ccbd;
+  }
+  50% {
+    text-shadow:
+      0 0 2px #ffffffe5,
+      0 0 5px #ffffffd8,
+      0 0 10px #16ccbd,
+      0 0 15px #16ccbd;
+  }
+}
+
+.loading-text {
+  color: #16ccbd;
+  font-weight: 100;
+  font-size: 5rem;
+  text-align: center;
+  animation: whiteNeonPulse 2s ease-in-out infinite;
+}
+
+
+/*------------------ SPINNER ------------------*/
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 25, 40, 0.9);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.themed-spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  border-radius: 10px;
+  //background-color: rgba(20, 35, 50, 0.637);
+  //box-shadow: 0 5px 20px rgba(0, 150, 255, 0.15);
+}
+
+.chart-spinner {
+  width: 250px; // Tamaño del spinner
+  height: auto;
+  overflow: visible;
+}
+
+.chart-line {
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  animation: drawLineTrend 2.5s ease-in-out infinite alternate;
+}
+
+.chart-dot {
+  animation: moveDotTrend 2.5s ease-in-out infinite alternate,
+             pulseDotTrend 0.8s ease-in-out infinite alternate;
+}
+
+.loading-text {
+  margin-top: 20px;
+  color: #B0C4DE; // Azul acero claro
+  font-size: 1.1em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@keyframes drawLineTrend {
+  0% {
+    stroke-dashoffset: 220;
+  }
+  40% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes moveDotTrend {
+  // Path: M 5 40 C 15 10, 25 30, 35 20 S 45 45, 55 35 S 65 5, 75 25 S 85 40, 95 30
+  0% { transform: translate(0px, 0px); }
+
+  // Primer segmento C 15 10, 25 30, 35 20
+  12.5% { transform: translate(10px, -30px); }
+  25% { transform: translate(30px, -20px); }
+
+  // Segundo segmento S 45 45, 55 35
+  37.5% { transform: translate(40px, 5px); }
+  50% { transform: translate(50px, -5px); }
+
+  // Tercer segmento S 65 5, 75 25
+  62.5% { transform: translate(60px, -35px); }
+  75% { transform: translate(70px, -15px); }
+
+  // Cuarto segmento S 85 40, 95 30
+  87.5% { transform: translate(80px, 0px); }
+  100% { transform: translate(90px, -10px); }
+}
+
+
+@keyframes pulseDotTrend {
+  0% {
+    r: 2.5;
+    opacity: 1;
+    filter: drop-shadow(0 0 1px #FFD700);
+  }
+  50% {
+    r: 3.5;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 3px #FFD700);
+  }
+  100% {
+    r: 2.5;
+    opacity: 1;
+    filter: drop-shadow(0 0 1px #FFD700);
+  }
+}
