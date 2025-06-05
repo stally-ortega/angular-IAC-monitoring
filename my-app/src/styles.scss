@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+// Sobrescribir variables Bootstrap
+$primary: #0d9488;
+
+// Importar las funciones y variables de Bootstrap
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
+
+// Importar Bootstrap para aplicar variables personalizadas
+@import "node_modules/bootstrap/scss/bootstrap";
