@@ -1,11 +1,46 @@
-// Sobrescribir variables Bootstrap
+@use "sass:map";
+
 $primary: #0d9488;
+$success: #16a34a;
+$danger: #dc2626;
+$warning: #f59e0b;
+$info: #3b82f6;
+$dark: #0f172a;
+$light: #f1f5f9;
+
+// Paleta para modo oscuro (guardada en un map Sass)
+$dark-theme-colors: (
+  "primary": #67e8f9,
+  "success": #4ade80,
+  "danger": #f87171,
+  "warning": #fde047,
+  "info": #60a5fa,
+  "dark": #020617,
+  "light": #1e293b,
+  "background": #0f172a,
+  "text": #e2e8f0
+);
 
 // Importar las funciones y variables de Bootstrap
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/maps";
-@import "node_modules/bootstrap/scss/mixins";
+@use "bootstrap/scss/bootstrap" with (
+  $primary: $primary,
+  $success: $success,
+  $danger: $danger,
+  $warning: $warning,
+  $info: $info,
+  $dark: $dark,
+  $light: $light
+);
 
-// Importar Bootstrap para aplicar variables personalizadas
-@import "node_modules/bootstrap/scss/bootstrap";
+// Sobre escribir las variables de Bootstrap para el modo oscuro
+.dark-mode {
+  --bs-body-bg: map.get($dark-theme-colors, "background");
+  --bs-body-color: map.get($dark-theme-colors, "text");
+  --bs-primary: map.get($dark-theme-colors, "primary");
+  --bs-success: map.get($dark-theme-colors, "success");
+  --bs-danger: map.get($dark-theme-colors, "danger");
+  --bs-warning: map.get($dark-theme-colors, "warning");
+  --bs-info: map.get($dark-theme-colors, "info");
+  --bs-dark: map.get($dark-theme-colors, "dark");
+  --bs-light: map.get($dark-theme-colors, "light");
+}
