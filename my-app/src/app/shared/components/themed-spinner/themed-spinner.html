@@ -1,0 +1,25 @@
+<div class="themed-spinner-container">
+  <svg class="chart-spinner" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="2.5" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+    <path
+      class="chart-line"
+      filter="url(#glow)"
+       d="M 5 40 C 15 10, 25 30, 35 20 S 45 45, 55 35 S 65 5, 75 25 S 85 40, 95 30"
+      stroke="#00ffea"
+      stroke-width="2.5"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <circle class="chart-dot" cx="5" cy="40" r="2.5" fill="#ffffff" filter="url(#glow)" />
+  </svg>
+  <p class="loading-text">Cargando...</p>
+</div>
