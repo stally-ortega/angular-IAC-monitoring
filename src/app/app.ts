@@ -6,7 +6,7 @@ import { LoadingSpinnerComponent } from './shared/components/loading-spinner.com
 import { SpinnerVisibilityService } from './core/services/spinner-visibility';
 import { Observable } from 'rxjs';
 import { TradingDataService } from './core/services/trading-data';
-import { Kpi } from './shared/models/kpi.model';
+import { Kpi } from './shared/models/interfaces/kpi.model';
 import { ThemedSpinner } from './shared/components/themed-spinner/themed-spinner';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Para ngIf, ngClass, etc.
-import { Kpi } from '../../models/kpi.model';
+import { Kpi } from '../../models/interfaces/kpi.model';
 
 @Component({
   selector: 'app-kpi-card',

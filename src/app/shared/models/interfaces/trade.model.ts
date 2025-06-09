@@ -9,4 +9,5 @@ export interface Trade {
   orderId?: string;
   commission?: number;
   // Otros campos opcionales para detalles adicionales
+  // equity?: number; // capitalor + (posición (solo 3 decimales) * precio actual(con 6 dcimales))
 }
