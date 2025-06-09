@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { delay, Observable, of, tap } from 'rxjs'; // 'of' para simular datos por ahora
 import { ApiService } from './api';
 import { SpinnerVisibilityService } from './spinner-visibility';
-import { Trade } from '../../shared/models/interface/trade.model';
+import { Trade } from '../../shared/models/interfaces/trade.model';
 
 @Injectable({
   providedIn: 'root'

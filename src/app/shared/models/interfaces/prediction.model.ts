@@ -1,4 +1,4 @@
-import { ActionEnum } from "../enum/action.enum";
+import { ActionEnum } from "../enums/action.enum";
 import { OhlcvModel } from "./ohlcv.model";
 
 export interface PredictionModel {
