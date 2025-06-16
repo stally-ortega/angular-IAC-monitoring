@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<app-themed-spinner *ngIf="isLoading$ | async"></app-themed-spinner>
+<app-loading-spinner *ngIf="isLoading$ | async"></app-loading-spinner>
 
 <main class="container mt-4">
   <router-outlet></router-outlet>
