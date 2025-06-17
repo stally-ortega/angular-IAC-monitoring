@@ -2,12 +2,11 @@ import { Component, OnInit, inject } from '@angular/core';
 import { AsyncPipe, CommonModule } from '@angular/common'; // IMPORTA AsyncPipe y CommonModule
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './shared/components/navbar.component/navbar.component';
-import { LoadingSpinnerComponent } from './shared/components/loading-spinner.component/loading-spinner.component';
+import { LoadingSpinner} from './shared/components/loading-spinner.component/loading-spinner';
 import { SpinnerVisibilityService } from './core/services/spinner-visibility';
 import { Observable } from 'rxjs';
 import { TradingDataService } from './core/services/trading-data';
 import { Kpi } from './shared/models/interfaces/kpi.model';
-import { ThemedSpinner } from './shared/components/themed-spinner/themed-spinner';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +15,7 @@ import { ThemedSpinner } from './shared/components/themed-spinner/themed-spinner
     CommonModule,
     RouterOutlet,
     NavbarComponent,
-    ThemedSpinner,
+    LoadingSpinner,
     AsyncPipe
   ],
   templateUrl: './app.html',
