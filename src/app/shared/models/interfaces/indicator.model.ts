@@ -1,4 +1,4 @@
-export interface IndicatorModelTs {
+export interface IndicatorModel {
     ema_20: number | null;
     ema_50: number | null;
     ema_100: number | null;
@@ -11,4 +11,5 @@ export interface IndicatorModelTs {
     bollinger_low: number | null;
     adx: number | null;
     volatility: number | null;
+    stoch_rsi: number | null;
 }
