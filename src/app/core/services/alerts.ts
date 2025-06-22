@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { ApiService } from './api';
-import { Alert } from '../../shared/models/interfaces/alert.model';
+import { Alert } from '@models/interfaces/alert.model';
 
 @Injectable({
   providedIn: 'root'

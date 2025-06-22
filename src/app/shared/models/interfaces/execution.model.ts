@@ -1,6 +1,6 @@
 import { ExecutionResponseModel } from "./execution-response.model";
 
-export interface Trade {
+export interface Order {
   id: string;
   timestamp: Date | string;
   symbol: string | null;

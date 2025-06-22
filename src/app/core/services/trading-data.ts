@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { delay, Observable, of, tap } from 'rxjs'; // 'of' para simular datos por ahora
 import { ApiService } from './api';
 import { SpinnerVisibilityService } from './spinner-visibility';
-import { Trade } from '../../shared/models/interfaces/execution.model';
+import { Order } from '@models/interfaces/execution.model';
 
 @Injectable({
   providedIn: 'root'
@@ -36,7 +36,7 @@ export class TradingDataService {
   }
 
   // Obtener trades más recientes
-  getRecentTrades(limit: number = 20): Observable<Trade[]> {
+  getRecentTrades(limit: number = 20): Observable<any[]> {
     // return this.apiService.get<Trade[]>(`/trades?limit=${limit}`);
 
     // Datos simulados

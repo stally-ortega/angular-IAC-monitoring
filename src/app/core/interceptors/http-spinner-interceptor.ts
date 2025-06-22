@@ -2,7 +2,7 @@ import { HttpInterceptorFn, HttpRequest, HttpHandlerFn, HttpEvent } from '@angul
 import { inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
-import { SpinnerVisibilityService } from '../services/spinner-visibility';
+import { SpinnerVisibilityService } from '@core/services/spinner-visibility';
 
 export const httpSpinnerInterceptor: HttpInterceptorFn = (
   req: HttpRequest<unknown>,
