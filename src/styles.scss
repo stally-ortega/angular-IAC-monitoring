@@ -1,46 +1,44 @@
 @use "sass:map";
-
-$primary: #12bbad;
-$success: #16a34a;
-$danger: #dc2626;
-$warning: #f59e0b;
-$info: #3b82f6;
-$dark: #0f172a;
-$light: #f1f5f9;
-
-// Paleta para modo oscuro (guardada en un map Sass)
-$dark-theme-colors: (
-  "primary": #67e8f9,
-  "success": #4ade80,
-  "danger": #f87171,
-  "warning": #fde047,
-  "info": #60a5fa,
-  "dark": #020617,
-  "light": #1e293b,
-  "background": #0f172a,
-  "text": #e2e8f0
-);
-
-// Importar las funciones y variables de Bootstrap
 @use "bootstrap/scss/bootstrap" with (
-  $primary: $primary,
-  $success: $success,
-  $danger: $danger,
-  $warning: $warning,
-  $info: $info,
-  $dark: $dark,
-  $light: $light
+  $primary: #45c1d1,
+  $success: #4ade80,
+  $danger: #f87171,
+  $warning: #fde047,
+  $info: #60a5fa,
+  $dark: #020617,
+  $light: #1e293b,
+  $body-bg: #0f172a,
+  $body-color: #e2e8f0
 );
 
-// Sobre escribir las variables de Bootstrap para el modo oscuro
-.dark-mode {
-  --bs-body-bg: map.get($dark-theme-colors, "background") !important;
-  --bs-body-color: map.get($dark-theme-colors, "text") !important;
-  --bs-primary: map.get($dark-theme-colors, "primary") !important;
-  --bs-success: map.get($dark-theme-colors, "success") !important;
-  --bs-danger: map.get($dark-theme-colors, "danger") !important;
-  --bs-warning: map.get($dark-theme-colors, "warning") !important;
-  --bs-info: map.get($dark-theme-colors, "info") !important;
-  --bs-dark: map.get($dark-theme-colors, "dark") !important;
-  --bs-light: map.get($dark-theme-colors, "light") !important;
+:root {
+  --bs-body-bg: #0f172a;
+  --bs-body-color: #e2e8f0;
+  --bs-primary: #45c1d1;
+  --bs-success: #4ade80;
+  --bs-danger: #f87171;
+  --bs-warning: #fde047;
+  --bs-info: #60a5fa;
+  --bs-dark: #020617;
+  --bs-light: #1e293b;
+  --bs-card-title-color: #e2e8f0;
+}
+
+.card {
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-title-color: #e2e8f0;
+  color: var(--bs-body-color);
+  background-color: var(--bs-light);
+  border-color: var(--bs-dark);
+}
+
+.card-title {
+  color: var(--bs-card-title-color) !important;
+}
+
+.modal-content {
+  background-color: var(--bs-light);
+  color: var(--bs-body-color);
 }

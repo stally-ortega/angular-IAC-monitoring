@@ -1,0 +1,29 @@
+<app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+
+<div *ngIf="!isLoading">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">Rendimiento Financiero</h2>
+    <button class="btn btn-sm btn-outline-primary" (click)="loadData()" title="Recargar datos">
+      Recargar
+    </button>
+  </div>
+
+  <div *ngIf="kpiCards.length > 0; else noData" class="row">
+    <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let kpi of kpiCards">
+      <app-kpi-card [kpiData]="kpi"></app-kpi-card>
+    </div>
+  </div>
+
+  <div *ngIf="chartOptions" class="card text-light border-secondary" style="background-color: #1a222c;">
+    <div class="card-body">
+      <h5 class="card-title">Evolución de Ganancias (Equity Curve)</h5>
+      <div echarts [options]="chartOptions" style="height: 400px;"></div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noData>
+  <div *ngIf="!isLoading" class="alert alert-warning text-center mt-4" role="alert">
+    No se pudieron cargar los datos. Por favor, intenta <a href="javascript:void(0)" (click)="loadData()">recargar</a>.
+  </div>
+</ng-template>

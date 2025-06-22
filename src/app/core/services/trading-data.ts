@@ -54,5 +54,22 @@ export class TradingDataService {
     return of({ liveAccuracy: 0.72, f1Score: 0.68, predictionDistribution: { buy: 40, sell: 35, hold: 25 } });
   }
 
-  // ... otros métodos para KPIs operacionales, etc.
+  getEquityCurve(): Observable<{date: string, pnl: number}[]> {
+    const simulatedData = [];
+    let currentPnl = 1000; // P&L inicial
+    
+    for (let i = 15; i > 0; i--) {
+      const date = new Date();
+      date.setDate(date.getDate() - i);
+      currentPnl += (Math.random() - 0.45) * 100; // Simula una fluctuación diaria
+      
+      simulatedData.push({
+        date: date.toLocaleDateString('es-CO', { day: '2-digit', month: 'short' }),
+        pnl: parseFloat(currentPnl.toFixed(2))
+      });
+    }
+
+    // Usamos 'of' y 'delay' para simular una llamada asíncrona
+    return of(simulatedData).pipe(delay(500)); 
+  }
 }
