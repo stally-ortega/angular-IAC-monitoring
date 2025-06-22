@@ -1,8 +1,8 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { AsyncPipe, CommonModule } from '@angular/common'; // IMPORTA AsyncPipe y CommonModule
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './shared/components/navbar.component/navbar.component';
-import { LoadingSpinner} from './shared/components/loading-spinner.component/loading-spinner';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { LoadingSpinner} from './shared/components/loading-spinner/loading-spinner.component';
 import { SpinnerVisibilityService } from './core/services/spinner-visibility';
 import { Observable } from 'rxjs';
 import { TradingDataService } from './core/services/trading-data';

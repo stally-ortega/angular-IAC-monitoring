@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThemedSpinner } from './themed-spinner';
+import { ModelPerfomanceComponent } from './model-perfomance.component';
 
-describe('ThemedSpinner', () => {
-  let component: ThemedSpinner;
-  let fixture: ComponentFixture<ThemedSpinner>;
+describe('ModelPerfomanceComponent', () => {
+  let component: ModelPerfomanceComponent;
+  let fixture: ComponentFixture<ModelPerfomanceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ThemedSpinner]
+      imports: [ModelPerfomanceComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ThemedSpinner);
+    fixture = TestBed.createComponent(ModelPerfomanceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

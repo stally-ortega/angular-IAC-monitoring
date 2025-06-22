@@ -10,8 +10,8 @@ import { EquityCurveChartService } from '@core/services/charts/equity-curve-char
 
 // Modelos y Componentes Reutilizables
 import { Kpi } from '@models/interfaces/kpi.model';
-import { KpiCardComponent } from '@shcomponents/kpi-card.component/kpi-card.component';
-import { LoadingSpinner } from '@shcomponents/loading-spinner.component/loading-spinner';
+import { KpiCardComponent } from '@shared/components/kpi-card/kpi-card.component';
+import { LoadingSpinner } from '@shared/components/loading-spinner/loading-spinner.component';
 
 @Component({
   selector: 'app-financial-performance',
