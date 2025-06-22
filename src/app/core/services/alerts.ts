@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { ApiService } from './api';
+import { ApiService } from './providers/api';
 import { Alert } from '@models/interfaces/alert.model';
 
 @Injectable({

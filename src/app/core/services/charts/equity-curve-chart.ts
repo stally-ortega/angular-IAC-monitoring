@@ -3,7 +3,7 @@ import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { EChartsOption } from 'echarts';
 import { BaseChartService } from './base-chart.service';
-import { TradingDataService } from '../trading-data'; // Nuestro servicio de datos
+import { TradingDataService } from '../providers/trading-data'; // Nuestro servicio de datos
 
 // Definimos el tipo de dato que esperamos para este gráfico
 type EquityData = { date: string; pnl: number }[];

@@ -5,7 +5,7 @@ import { EChartsOption } from 'echarts';
 import { NgxEchartsModule } from 'ngx-echarts';
 
 // Servicios
-import { TradingDataService } from '@core/services/trading-data';
+import { TradingDataService } from '@core/services/providers/trading-data';
 import { EquityCurveChartService } from '@core/services/charts/equity-curve-chart';
 
 // Modelos y Componentes Reutilizables
@@ -44,7 +44,7 @@ export class FinancialPerformanceComponent implements OnInit {
 
     // Usamos forkJoin para ejecutar ambas llamadas de datos en paralelo
     forkJoin({
-      summary: this.tradingDataService.getFinancialSummary(),
+      summary: this.tradingDataService.getKpis(),
       chartOpts: this.equityChartService.generateChartOptions()
     })
     .pipe(

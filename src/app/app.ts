@@ -5,8 +5,6 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { LoadingSpinner} from './shared/components/loading-spinner/loading-spinner.component';
 import { SpinnerVisibilityService } from './core/services/spinner-visibility';
 import { Observable } from 'rxjs';
-import { TradingDataService } from './core/services/trading-data';
-import { Kpi } from './shared/models/interfaces/kpi.model';
 
 @Component({
   selector: 'app-root',
@@ -23,15 +21,9 @@ import { Kpi } from './shared/models/interfaces/kpi.model';
 })
 export class App implements OnInit {
   protected title = 'my-app';
-  private tradingDataService = inject(TradingDataService);
-  // private spinnerService = inject(SpinnerVisibilityService); // Opción 1 para inyectar
   isLoading$: Observable<boolean>;
 
-  summaryData: any;
-  kpiPnl?: Kpi;
-  kpiWinRate?: Kpi;
-
-  constructor(private spinnerService: SpinnerVisibilityService) { // Opción 2 para inyectar
+  constructor(private spinnerService: SpinnerVisibilityService) {
     this.isLoading$ = this.spinnerService.visibility$;
   }
 
@@ -42,14 +34,5 @@ export class App implements OnInit {
     } else if (typeof window !== 'undefined') {
       console.log('Sistema NO está en modo oscuro o matchMedia no es compatible.');
     }
-
-    console.log('FinancialPerformanceComponent: ngOnInit. Llamando a getFinancialSummary (simulado)...');
-    this.tradingDataService.getFinancialSummary()
-      .subscribe({
-        next: (data) => {
-          console.log('FinancialPerformanceComponent: Datos recibidos:', data);
-        },
-        error: (err) => console.error('Error obteniendo resumen financiero simulado:', err)
-      });
   }
 }

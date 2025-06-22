@@ -1,4 +1,4 @@
-import { ExecutionResponseModel } from "./execution-response.model";
+import { ExecutionResponseModel } from "./order-response.model";
 
 export interface Order {
   id: string;
